@@ -1,0 +1,31 @@
+<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <!-- remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ImageResourceInterface']" / -->  
+  <!-- emove-node path="/api/package[@name='com.wikitude.architect']/class[@name='HtmlDrawableInterface']" / -->  
+  <!-- remove-node path="/api/package[@name='com.wikitude.architect']/interface[@name='ARModeChangeListener']" / -->  
+  <!-- remove-node path="/api/package[@name='com.wikitude.architect']/interface[@name='ARModeChangeListenerImplementor']" / -->  
+  <!-- remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectInterface']" / --> 
+  <remove-node path="/api/package[@name='com.wikitude.tools']/class[@name='ImageUtil']" /> 
+  <remove-node path="/api/package[@name='com.wikitude.tools']/class[@name='AsyncImageLoader']" /> 
+  
+  
+  <remove-node path="/api/package[@name='org.jsoup.parser']/class[@name='XmlTreeBuilder']" /> 
+  <remove-node path="/api/package[@name='org.jsoup.parser']/class[@name='Parser']" /> 
+  <remove-node path="/api/package[@name='org.jsoup.select']/class[@name='Evaluator']" /> 
+  <remove-node path="/api/package[@name='org.jsoup.helper']/class[@name='HttpConnection']" /> 
+  <remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Element']" />
+	<remove-node path="/api/package[@name='org.jsoup.nodes']/class[@name='Attribute']" />
+
+	<remove-node path="/api/package[@name='com.wikitude.tools.compatibility']/class[@name='CapsuleAPI']/method[@name='startAsyncTaskParallel']" />
+
+	<!-- remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectView']/method[@name='a']" / -->
+  <!-- remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectView']/method[@name='b']" / -->
+  
+  
+</metadata>
