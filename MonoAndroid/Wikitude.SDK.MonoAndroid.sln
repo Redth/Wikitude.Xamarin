@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wikitude.SDK.MonoAndroid.Si
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{5F10A1FD-ACB6-4AAA-9F26-A25F1CA375AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wikitude.SDK.MonoAndroid.SimpleIRExample", "Wikitude.SDK.MonoAndroid.SimpleIRExample\Wikitude.SDK.MonoAndroid.SimpleIRExample.csproj", "{E6D0544A-FC10-4BBB-9E0D-F3C63D8B13C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wikitude.SDK.MonoAndroid.SimpleIRExample", "Examples\SimpleIRExample\Wikitude.SDK.MonoAndroid.SimpleIRExample.csproj", "{E6D0544A-FC10-4BBB-9E0D-F3C63D8B13C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

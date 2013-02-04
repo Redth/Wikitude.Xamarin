@@ -79,7 +79,7 @@
     <TransformFile Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Wikitude.SDK.MonoAndroid\Wikitude.SDK.MonoAndroid.csproj">
+    <ProjectReference Include="..\..\Wikitude.SDK.MonoAndroid\Wikitude.SDK.MonoAndroid.csproj">
       <Project>{6e796d12-38b8-4183-a526-3afb6a95ad3f}</Project>
       <Name>Wikitude.SDK.MonoAndroid</Name>
     </ProjectReference>
