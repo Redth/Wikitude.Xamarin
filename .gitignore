@@ -25,3 +25,10 @@ libExtensionVuforia.so
 libQCAR.so
 QCAR.jar
 wikitudesdk.jar
+
+*.a
+*.so
+
+libQCAR2.a
+libWikitudeSDK.a
+libExtensionVuforia.a
