@@ -6,8 +6,7 @@ using Android.Locations;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Com.Wikitude.Architect;
-using System.Collections.Specialized;
+using Wikitude.Architect;
 
 namespace Wikitude.SDK.MonoAndroid
 {
@@ -80,7 +79,7 @@ namespace Wikitude.SDK.MonoAndroid
 					StartActivity(intent);
 				});
 
-			arView = this.FindViewById<Com.Wikitude.Architect.ArchitectView>(Resource.Id.architectView);
+			arView = this.FindViewById<ArchitectView>(Resource.Id.architectView);
 
 			var config = new ArchitectView.ArchitectConfig(WIKITUDE_LICENSE_KEY);
 
