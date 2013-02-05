@@ -15,11 +15,12 @@ Failure to follow these guides will likely result in your applications not funct
 
 
 ##### Wikitude SDK SETUP #####
+
 	1) Download the Wikitude Android SDK from: http://wikitude.com
 	2) Inside the extracted zip file's contents, find the file:
 		```/SDK/Extensions/VuforiaExtension/libExtensionVuforia.so```
 	3) Ensure your project has the following folders inside of it:
-		`/lib/armeabi/`
+		```/lib/armeabi/```
 		```/lib/armeabi-v7a/```
 	4) Copy the ```libExtensionVuforia.so``` file into both of your project's ```lib/armeabi*``` folders:
 		```/lib/armeabi/libExtensionVuforia.so```
@@ -34,6 +35,7 @@ Failure to follow these guides will likely result in your applications not funct
 
 
 ##### Vuforia SDK SETUP #####
+
 	1) Download the Vuforia SDK from: https://developer.vuforia.com/resources/sdk/android
 	2) After installing the SDK, find the files in the installed location:
 		```/build/lib/armeabi/libQCAR.so```
