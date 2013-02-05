@@ -19,7 +19,7 @@ Failure to follow these guides will likely result in your applications not funct
 	2) Inside the extracted zip file's contents, find the file:
 		```/SDK/Extensions/VuforiaExtension/libExtensionVuforia.so```
 	3) Ensure your project has the following folders inside of it:
-		```/lib/armeabi/```
+		`/lib/armeabi/`
 		```/lib/armeabi-v7a/```
 	4) Copy the ```libExtensionVuforia.so``` file into both of your project's ```lib/armeabi*``` folders:
 		```/lib/armeabi/libExtensionVuforia.so```
