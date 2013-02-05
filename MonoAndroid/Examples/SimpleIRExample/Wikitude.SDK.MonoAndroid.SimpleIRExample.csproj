@@ -79,12 +79,6 @@
     <TransformFile Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Wikitude.SDK.MonoAndroid\Wikitude.SDK.MonoAndroid.csproj">
-      <Project>{6e796d12-38b8-4183-a526-3afb6a95ad3f}</Project>
-      <Name>Wikitude.SDK.MonoAndroid</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\DirectionArrow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +89,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\WikitudeLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wikitude.SDK.MonoAndroid.Binding\Wikitude.SDK.MonoAndroid.Binding.csproj">
+      <Project>{6e796d12-38b8-4183-a526-3afb6a95ad3f}</Project>
+      <Name>Wikitude.SDK.MonoAndroid.Binding</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

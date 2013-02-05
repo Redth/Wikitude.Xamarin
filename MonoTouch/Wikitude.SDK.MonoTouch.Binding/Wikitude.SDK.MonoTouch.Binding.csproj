@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Wikitude</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Wikitude.MonoTouch</AssemblyName>
+    <AssemblyName>Wikitude.SDK.MonoTouch.Binding</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>

@@ -83,12 +83,12 @@
     <AndroidAsset Include="Assets\marker3.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Wikitude.SDK.MonoAndroid\Wikitude.SDK.MonoAndroid.csproj">
-      <Project>{6E796D12-38B8-4183-A526-3AFB6A95AD3F}</Project>
-      <Name>Wikitude.SDK.MonoAndroid</Name>
-    </ProjectReference>
+    <AndroidAsset Include="Assets\tutorial1.html" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\tutorial1.html" />
+    <ProjectReference Include="..\..\Wikitude.SDK.MonoAndroid.Binding\Wikitude.SDK.MonoAndroid.Binding.csproj">
+      <Project>{6e796d12-38b8-4183-a526-3afb6a95ad3f}</Project>
+      <Name>Wikitude.SDK.MonoAndroid.Binding</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

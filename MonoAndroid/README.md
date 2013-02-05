@@ -28,7 +28,7 @@ Failure to follow these guides will likely result in your applications not funct
 		(by right clicking each file and from the Build Action menu) to: ```AndroidNativeLibrary```
 	7) Inside the extracted zip file's contents, find the file:
 		```/SDK/wikitudesdk.jar```
-	8) Copy the ```wikitudesdk.jar``` into the ```/Jars/``` folder of the ```Wikitude.SDK.MonoAndroid``` project
+	8) Copy the ```wikitudesdk.jar``` into the ```/Jars/``` folder of the ```Wikitude.SDK.MonoAndroid.Binding``` project
 	9) For the ```wikitudesdk.jar``` file, set the build action 
 		(by right clicking each file and from the Build Action menu) to: ```EmbeddedJar```
 
@@ -44,7 +44,7 @@ Failure to follow these guides will likely result in your applications not funct
 	4) Again, set the build action of both ```libQCAR.so``` files to ```AndroidNativeLibrary```
 	5) After installing the SDK, find the files in the installed location:
 		```/build/java/QCAR/QCAR.jar```
-	6) Copy ```QCAR.jar``` into the ```/Jars/``` folder of the ```Wikitude.SDK.MonoAndroid``` project
+	6) Copy ```QCAR.jar``` into the ```/Jars/``` folder of the ```Wikitude.SDK.MonoAndroid.Binding``` project
 	7) Again, set the build action of ```QCAR.jar``` to ```EmbeddedJar```
 
 

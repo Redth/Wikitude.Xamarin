@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -90,6 +91,20 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="SimpleIRExampleViewController.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Wikitude.SDK.MonoTouch.Binding\Wikitude.SDK.MonoTouch.Binding.csproj">
+      <Project>{273637CB-AC56-4C20-B57A-CCB74E2C19E4}</Project>
+      <Name>Wikitude.SDK.MonoTouch.Binding</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Assets\DirectionArrow.png" />
+    <BundleResource Include="Assets\overlay.png" />
+    <BundleResource Include="Assets\WikitudeLogo.png" />
+    <BundleResource Include="Assets\WikitudeLogo.zip" />
+    <BundleResource Include="Assets\SimpleIRExampleWorld.html" />
+  </ItemGroup>
 </Project>
