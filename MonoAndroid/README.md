@@ -7,14 +7,14 @@ The Wikitude Bindings for MonoTouch and Mono for Android enables Xamarin develop
 
 
 
-### SETUP ###
+### Mono for Android SETUP ###
 
 It is critical that you follow the setup guides for each platform, as you need to download the Wikitude SDK and the Vuforia SDK and extract some files from each, and put them in the right place in order to build the bindings and sample projects (or your own projects).
 
 Failure to follow these guides will likely result in your applications not functioning!
 
 
-##### Wikitude SDK SETUP #####
+##### Wikitude SDK SETUP - Mono for Android #####
 
 	1) Download the Wikitude Android SDK from: http://wikitude.com
 	2) Inside the extracted zip file's contents, find the file:
@@ -34,7 +34,7 @@ Failure to follow these guides will likely result in your applications not funct
 		(by right clicking each file and from the Build Action menu) to: ```EmbeddedJar```
 
 
-##### Vuforia SDK SETUP #####
+##### Vuforia SDK SETUP - Mono for Android #####
 
 	1) Download the Vuforia SDK from: https://developer.vuforia.com/resources/sdk/android
 	2) After installing the SDK, find the files in the installed location:
