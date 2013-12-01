@@ -14,7 +14,7 @@ using Android.Util;
 namespace Com.Wikitude.Samples
 {
 	[Activity (Label = "SamplePoidataFromNativeAndUrlListenerRefreshActivity")]			
-	public class SamplePoidataFromNativeAndUrlListenerRefreshActivity : SamplePoidataFromNativeActivity, IArchitectUrlListener
+	public class SamplePoidataFromNativeAndUrlListenerRefreshActivity : SamplePoidataFromNativeActivity, ArchitectView.IArchitectUrlListener
 	{
 		protected override void OnCreate (Bundle bundle)
 		{

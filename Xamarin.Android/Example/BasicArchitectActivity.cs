@@ -16,7 +16,7 @@ using Android.Util;
 namespace Com.Wikitude.Samples
 {
 	[Activity (Label = "BaseArchitectActivity")]			
-	public class BasicArchitectActivity : Activity, ISensorAccuracyChangeListener, ILocationListener
+	public class BasicArchitectActivity : Activity, ArchitectView.ISensorAccuracyChangeListener, ILocationListener
 	{
 		public const string EXTRAS_KEY_ACTIVITY_TITLE_STRING = "activityTitle";
 		public const string EXTRAS_KEY_ACTIVITY_ARCHITECT_WORLD_URL = "activityArchitectWorldUrl";
