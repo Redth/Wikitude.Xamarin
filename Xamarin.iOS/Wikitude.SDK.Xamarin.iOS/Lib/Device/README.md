@@ -1,1 +1,0 @@
-See the MonoTouch/README.md for information on how to setup your Libs!
