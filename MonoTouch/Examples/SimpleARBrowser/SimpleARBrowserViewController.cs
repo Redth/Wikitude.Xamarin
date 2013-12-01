@@ -35,7 +35,7 @@ namespace Wikitude.SDK.MonoTouch.SimpleARBrowser
         
         public override void ViewWillAppear(bool animated)
         {
-            if (!ArchitectView.IsDeviceSupported())
+            if (!ArchitectView.IsDeviceSupported(ARMode.Geo))
             {
                 Console.WriteLine("Device Not Supported!!!");
                 return;
@@ -62,7 +62,7 @@ namespace Wikitude.SDK.MonoTouch.SimpleARBrowser
                 arView.Delegate = urlDel;
                
                 //Load HTML
-                arView.LoadArchitectWorldFromUrl(urlRes);
+                arView.LoadArchitectWorld(NSUrl.FromString(urlRes));
                 
                 //Call javascript POI's
                 var json = GeneratePoiJson();
@@ -73,7 +73,7 @@ namespace Wikitude.SDK.MonoTouch.SimpleARBrowser
             
             arView.SetUseInjectedLocation(true);
             
-            arView.InjectLocationWithLatitude(TEST_LATITUDE, TEST_LONGITUDE, TEST_ALTITUDE, 1f);
+            arView.InjectLocation(TEST_LATITUDE, TEST_LONGITUDE, TEST_ALTITUDE, 1f);
         }
 
         Random rnd = new Random();

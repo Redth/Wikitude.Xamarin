@@ -33,8 +33,8 @@ namespace Wikitude.SDK.MonoTouch.SimpleIRExample
         
         public override void ViewWillAppear(bool animated)
         {
-            if (!ArchitectView.IsDeviceSupported())
-            {
+           	if (!ArchitectView.IsDeviceSupported(ARMode.IR))
+           	{
                 Console.WriteLine("Device Not Supported!!!");
                 return;
             }
@@ -43,13 +43,13 @@ namespace Wikitude.SDK.MonoTouch.SimpleIRExample
             {
                 didInitAR = true;
                 
-                arView = new ArchitectView(this.View.Bounds);
-                
-                arView.Initialize("", null);
-                
-                this.View.AddSubview(arView);
-                
-                var urlRes = NSBundle.MainBundle.PathForResource("SimpleIRExampleWorld", "html");
+			   	arView = new ArchitectView(this.View.Bounds);
+
+				arView.Initialize("", null);
+
+				this.View.AddSubview(arView);
+
+				var urlRes = NSBundle.MainBundle.PathForResource("SimpleIRExampleWorld", "html");
                 
                 urlDel = new UrlInvokeDelegate(url => {
                     
@@ -60,14 +60,14 @@ namespace Wikitude.SDK.MonoTouch.SimpleIRExample
                 arView.Delegate = urlDel;
                 
                 //Load HTML
-                arView.LoadArchitectWorldFromUrl(urlRes);
+                arView.LoadArchitectWorld(NSUrl.FromString(urlRes));
             }
             
             arView.Start();
             
-            arView.SetUseInjectedLocation(true);
+			arView.SetUseInjectedLocation (true);
             
-            arView.InjectLocationWithLatitude(TEST_LATITUDE, TEST_LONGITUDE, TEST_ALTITUDE, 1f);
+           	arView.InjectLocation(TEST_LATITUDE, TEST_LONGITUDE, TEST_ALTITUDE, 1f);
         }
         
         public override void ViewWillDisappear(bool animated)

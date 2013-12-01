@@ -28,6 +28,15 @@
 	<remove-node path="/api/package[@name='org.jsoup.nodes']" />
 	<remove-node path="/api/package[@name='org.jsoup.safety']" />
 	<remove-node path="/api/package[@name='org.jsoup.select']" />
+	
+	<remove-node path="/api/package[@name='com.qualcomm.ar.pl']" />
+	
+	
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ImageResourceInterface']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='TrackerInterface']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/interface[@name='ARModeChangeListener']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectWebView']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectWebView.AsyncArchitectLoader']" />
 
 	<remove-node path="/api/package[@name='com.wikitude.tools.compatibility']/class[@name='CapsuleAPI']/method[@name='startAsyncTaskParallel']" />
 

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D9D6822-3FB2-4C54-AC76-8461C69C1DF5}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Com.Wikitude.Samples</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AssemblyName>Example</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Json" />
+    <Reference Include="Mono.Android.Support.v4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SamplesListActivity.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Location\ILocationProvider.cs" />
+    <Compile Include="Location\LocationProvider.cs" />
+    <Compile Include="SamplePoidataFromNativeActivity.cs" />
+    <Compile Include="Utils\GeoUtils.cs" />
+    <Compile Include="SamplePoidataFromNativeAndUrlListenerActivity.cs" />
+    <Compile Include="SamplePoiDetailActivity.cs" />
+    <Compile Include="SamplePoidataFromNativeAndUrlListenerRefreshActivity.cs" />
+    <Compile Include="Utils\Constants.cs" />
+    <Compile Include="BasicArchitectActivity.cs" />
+    <Compile Include="Utils\UrlLauncher\ARchitectUrlLauncherActivity.cs" />
+    <Compile Include="Utils\UrlLauncher\ARchitectUrlLauncherCamActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\activity_main.xml" />
+    <AndroidResource Include="Resources\layout\list_main.xml" />
+    <AndroidResource Include="Resources\layout\list_sample.xml" />
+    <AndroidResource Include="Resources\layout\list_startscreen.xml" />
+    <AndroidResource Include="Resources\layout\sample_1.xml" />
+    <AndroidResource Include="Resources\layout\sample_5_1_poidetail.xml" />
+    <AndroidResource Include="Resources\layout\sample_cam.xml" />
+    <AndroidResource Include="Resources\layout\urllauncher_main.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v11\styles.xml" />
+    <AndroidResource Include="Resources\values-v14\styles.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\drawable-ldpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\layout\" />
+    <Folder Include="Resources\values\" />
+    <Folder Include="Resources\values-v11\" />
+    <Folder Include="Resources\values-v14\" />
+    <Folder Include="Assets\samples\" />
+    <Folder Include="Location\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Utils\UrlLauncher\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wikitude.SDK.Xamarin.Android\Wikitude.SDK.Xamarin.Android.csproj">
+      <Project>{6E796D12-38B8-4183-A526-3AFB6A95AD3F}</Project>
+      <Name>Wikitude.SDK.Xamarin.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\samples\ade.js" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\Red Bulletin Demo.pdf" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\index.html" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\assets\imageOne.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\assets\magazine.wtc" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\css\default.css" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_1_Image%24On%24Target\js\imagerecognition.js" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\index.html" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\assets\imageOne.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\assets\imageTwo.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\assets\magazine.wtc" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\css\default.css" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_2_Multiple%24Targets\js\imagerecognition.js" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\index.html" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\assets\imageOne.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\assets\imageTwo.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\assets\magazine.wtc" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\assets\wwwButton.jpg" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\css\default.css" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_3_Interactivity\js\imagerecognition.js" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\index.html" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\assets\imageOne.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\assets\imageSparkles.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\assets\imageTwo.png" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\assets\magazine.wtc" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\assets\wwwButton.jpg" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\css\default.css" />
+    <AndroidAsset Include="Assets\samples\1_Image%24Recognition_4_Bonus-Sparkles\js\imagerecognition.js" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\carAd.jpg" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\index.html" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\assets\car.wt3" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\assets\tracker.wtc" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\css\default.css" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_1_3d%24Model%24On%24Target\js\imagerecognitionand3d.js" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_2_Appearing%24Animation\index.html" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_2_Appearing%24Animation\assets\car.wt3" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_2_Appearing%24Animation\assets\tracker.wtc" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_2_Appearing%24Animation\css\default.css" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_2_Appearing%24Animation\js\imagerecognitionand3d.js" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\index.html" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\assets\car.wt3" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\assets\rotateButton.png" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\assets\tracker.wtc" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\css\default.css" />
+    <AndroidAsset Include="Assets\samples\2_3d%24And%24Image%24Recognition_3_Interactivity\js\imagerecognitionand3d.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_1_Poi%24At%24Location\index.html" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_1_Poi%24At%24Location\assets\marker.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_1_Poi%24At%24Location\css\default.css" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_1_Poi%24At%24Location\js\poiatlocation.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_2_Poi%24With%24Label\index.html" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_2_Poi%24With%24Label\assets\marker.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_2_Poi%24With%24Label\css\default.css" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_2_Poi%24With%24Label\js\poiwithlabel.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\index.html" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\css\default.css" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_3_Multiple%24Pois\js\multiplepois.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\index.html" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\css\default.css" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\3_Point%24Of%24Interest_4_Selecting%24Pois\js\selectingpois.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\index.html" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\css\default.css" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\js\ade.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\js\poisFromWebservice.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_1_From%24Webservice\js\jquery\jquery-1.5.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\index.html" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\css\default.css" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\js\myJsonData.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_2_From%24Local%24Resource\js\poisFromLocal.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\index.html" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\css\default.css" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\4_Obtain%24Poi%24Data_3_From%24Application%24Model\js\poisFromNative.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\index.html" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\css\default.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\img\marker.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\img\radar_bg-medium.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\img\radar_north-medium.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_1_Presenting%24Poi%24Details\js\presentingPoiDetails.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\index.html" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\css\default.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\img\marker.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\img\radar_bg.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\img\radar_north.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\js\poiRadarSample.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_2_Poi%24Radar\js\radar.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\index.html" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\css\default.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\css\slider.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\css\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\css\jquery\jquery-mobile.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\img\marker.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\img\radar_bg.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\img\radar_north.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\limitingVisiblePois.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\radar.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\slider.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\jquery\jquery-mobile.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\jquery\jquery.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\jquery\jquery.scrollevents.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_3_Limiting%24Visible%24Pois\js\jquery\jquery.ui.touch-punch.min.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\index.html" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\assets\marker_idle.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\assets\marker_selected.png" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\css\default.css" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\js\marker.js" />
+    <AndroidAsset Include="Assets\samples\5_Browsing%24Pois_4_Reloading%24Poi%24Data\js\reloadingPois.js" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\ShopAd.jpg" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\index.html" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\ShopAd.wtc" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_Deal.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_FindShops.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_GetADeal.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_Marker.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_OpenWebsite.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\assets\YourShop_color.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_1_Image%24Recognition%24And%24Geo\js\irandgeo.js" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\index.html" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Earth-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Jupiter-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Mars-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Mercury-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Neptune-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Pluto-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Saturn-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Sun-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Uranus-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\Venus-icon.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\assets\indi.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\css\default.css" />
+    <AndroidAsset Include="Assets\samples\6_Demo_2_Solar%24System%28Geo%29\js\solarsystem.js" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\index.html" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\solarsystem.jpg" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\SolarSystem.wtc" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\backdrop.png" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\earth.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\jupiter.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\mars.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\mercury.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\neptune.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\pluto.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\saturn.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\sun.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\uranus.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\assets\venus.wt3" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\css\default.css" />
+    <AndroidAsset Include="Assets\samples\6_Demo_3_Solar%24System%28Image%24Recognition%29\js\solarsystemir.js" />
+  </ItemGroup>
+</Project>

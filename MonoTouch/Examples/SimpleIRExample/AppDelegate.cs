@@ -15,6 +15,8 @@ namespace Wikitude.SDK.MonoTouch.SimpleIRExample
     {
         // class-level declarations
         UIWindow window;
+        SimpleIRExampleViewController viewController;
+        UINavigationController navController;
 
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -28,8 +30,11 @@ namespace Wikitude.SDK.MonoTouch.SimpleIRExample
             // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 			
+            viewController = new SimpleIRExampleViewController();
+            navController = new UINavigationController(viewController);
+
             // If you have defined a root view controller, set it here:
-            // window.RootViewController = myViewController;
+            window.AddSubview(navController.View);
 			
             // make the window visible
             window.MakeKeyAndVisible();

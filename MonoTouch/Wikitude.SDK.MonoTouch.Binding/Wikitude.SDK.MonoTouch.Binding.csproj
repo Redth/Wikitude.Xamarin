@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Wikitude</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Wikitude.SDK.MonoTouch.Binding</AssemblyName>
+    <AssemblyName>Wikitude.SDK.Xamarin.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -50,22 +50,10 @@
     <Compile Include="libWikitudeSDK.linkwith.cs">
       <DependentUpon>libWikitudeSDK.a</DependentUpon>
     </Compile>
-    <Compile Include="libExtensionVuforia.linkwith.cs">
-      <DependentUpon>libExtensionVuforia.a</DependentUpon>
-    </Compile>
-    <Compile Include="libQCAR2.linkwith.cs">
-      <DependentUpon>libQCAR2.a</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="Lib\Device\libWikitudeSDK.a">
       <Link>libWikitudeSDK.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="Lib\Device\libExtensionVuforia.a">
-      <Link>libExtensionVuforia.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="Lib\Device\libQCAR2.a">
-      <Link>libQCAR2.a</Link>
     </ObjcBindingNativeLibrary>
   </ItemGroup>
 </Project>

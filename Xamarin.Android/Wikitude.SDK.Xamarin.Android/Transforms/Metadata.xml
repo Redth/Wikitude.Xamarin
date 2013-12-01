@@ -1,0 +1,43 @@
+<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+	<attr path="/api/package[@name='com.wikitude.architect']" name="managedName">Wikitude.Architect</attr>
+	<attr path="/api/package[@name='com.wikitude.tools']" name="managedName">Wikitude.Tools</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.activities']" name="managedName">Wikitude.Tools.Activities</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.compatibility']" name="managedName">Wikitude.Tools.Compatibility</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.listener']" name="managedName">Wikitude.Tools.Listener</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.location']" name="managedName">Wikitude.Tools.Location</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.services']" name="managedName">Wikitude.Tools.Services</attr>
+	<attr path="/api/package[@name='com.wikitude.tools.views']" name="managedName">Wikitude.Tools.Views</attr>
+  
+  
+	  <remove-node path="/api/package[@name='com.wikitude.tools']/class[@name='ImageUtil']" /> 
+  	<remove-node path="/api/package[@name='com.wikitude.tools']/class[@name='AsyncImageLoader']" />
+
+	<remove-node path="/api/package[@name='org.jsoup']" />
+	<remove-node path="/api/package[@name='org.jsoup.parser']" />
+	<remove-node path="/api/package[@name='org.jsoup.examples']" />
+	<remove-node path="/api/package[@name='org.jsoup.helper']" />
+	<remove-node path="/api/package[@name='org.jsoup.nodes']" />
+	<remove-node path="/api/package[@name='org.jsoup.safety']" />
+	<remove-node path="/api/package[@name='org.jsoup.select']" />
+	
+	<remove-node path="/api/package[@name='com.qualcomm.ar.pl']" />
+	
+	
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ImageResourceInterface']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='TrackerInterface']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/interface[@name='ARModeChangeListener']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectWebView']" />
+	<remove-node path="/api/package[@name='com.wikitude.architect']/class[@name='ArchitectWebView.AsyncArchitectLoader']" />
+	<remove-node path="/api/package[@name='com.wikitude.tools.image']/class[@name='ImageUtil']" />
+	<remove-node path="/api/package[@name='com.wikitude.tools.image']/class[@name='AsyncImageLoader']" />
+
+	<remove-node path="/api/package[@name='com.wikitude.tools.compatibility']/class[@name='CapsuleAPI']/method[@name='startAsyncTaskParallel']" />
+
+</metadata>

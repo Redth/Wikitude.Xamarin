@@ -44,6 +44,9 @@
     <ConsolePause>False</ConsolePause>
     <MtouchDebug>True</MtouchDebug>
     <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n />
+    <MtouchArch>ARMv7</MtouchArch>
+    <IpaPackageName />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -101,10 +104,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Assets\DirectionArrow.png" />
-    <BundleResource Include="Assets\overlay.png" />
-    <BundleResource Include="Assets\WikitudeLogo.png" />
-    <BundleResource Include="Assets\WikitudeLogo.zip" />
-    <BundleResource Include="Assets\SimpleIRExampleWorld.html" />
+    <BundleResource Include="DirectionArrow.png" />
+    <BundleResource Include="overlay.png" />
+    <BundleResource Include="SimpleIRExampleWorld.html" />
+    <BundleResource Include="WikitudeLogo.png" />
+    <BundleResource Include="WikitudeLogo.zip" />
   </ItemGroup>
 </Project>

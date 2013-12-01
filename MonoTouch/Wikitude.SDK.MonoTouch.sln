@@ -75,6 +75,6 @@ Global
 		{72A70305-A77E-4F52-9957-CC79131BED72} = {58A89F3A-8168-4066-A6FA-407FB502897A}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Wikitude.SDK.MonoTouch.Binding\Wikitude.SDK.MonoTouch.Binding.csproj
+		StartupItem = Examples\SimpleIRExample\Wikitude.SDK.MonoTouch.SimpleIRExample.csproj
 	EndGlobalSection
 EndGlobal
