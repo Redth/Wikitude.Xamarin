@@ -1,0 +1,1 @@
+/Users/jonathan/Dropbox/GitHub/Wikitude.SDK/LICENSE.md

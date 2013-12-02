@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wikitude.SDK.Xamarin.iOS", "..\..\src\iOS\Wikitude.SDK.Xamarin.iOS\Wikitude.SDK.Xamarin.iOS.csproj", "{273637CB-AC56-4C20-B57A-CCB74E2C19E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example\Example.csproj", "{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +41,6 @@ Global
 		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Example\Example\Example.csproj
+		StartupItem = ..\..\src\iOS\Wikitude.SDK.Xamarin.iOS\Wikitude.SDK.Xamarin.iOS.csproj
 	EndGlobalSection
 EndGlobal
