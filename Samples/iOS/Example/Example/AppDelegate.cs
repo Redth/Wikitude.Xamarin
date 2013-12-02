@@ -14,6 +14,9 @@ namespace WikitudeSample
 	{
 		// class-level declarations
 		UIWindow window;
+		UINavigationController navController;
+		ExampleListViewController exampleController;
+
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this 
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -29,10 +32,14 @@ namespace WikitudeSample
 			// If you have defined a root view controller, set it here:
 			// window.RootViewController = myViewController;
 			
+
+			exampleController = new ExampleListViewController ();
+			navController = new UINavigationController (exampleController);
+
+			window.RootViewController = navController;
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
-
-			Wikitude.Architect.ArchitectView arview = new Wikitude.Architect.ArchitectView (new System.Drawing.RectangleF ());
 
 			return true;
 		}
