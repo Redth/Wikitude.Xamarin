@@ -22,7 +22,7 @@ if (ArchitectView.IsDeviceSupported (ARMode.Geo))
 	this.View = arView;
 
 	//Initialize our AR engine with our license key
-	arView.Initialize ("YOUR_LICENSE_KEY_HERE", null);
+	arView.SetLicenseKey ("YOUR-LICENSE-KEY");
 
 	//Load an AR Wikitude World from a url
 	arView.LoadArchitectWorld (NSUrl.FromString ("http://wikitude.world.url.com"));
@@ -55,7 +55,7 @@ public override void ViewWillDisappear (bool animated)
 To get started, you'll need to add an `ArchitectView` to your Android Layout:
 
 ```xml
-<Wikitude.Architect.ArchitectView
+<com.wikitude.architect.ArchitectView
   android:id="@+id/architectView"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent" />
@@ -64,7 +64,6 @@ To get started, you'll need to add an `ArchitectView` to your Android Layout:
 Next, you need to inform the ArchitectView of all the Activity or Fragment lifecycle changes:
 
 ```csharp
-
 protected override void OnCreate (Bundle bundle)
 {
 	//Set your content view as usual
@@ -82,14 +81,12 @@ protected override void OnResume ()
 {
 	base.OnResume ();
 
-	if (architectView != null)
-	{
+	if (architectView != null) {
 		//Tell the AR View about the resume step in the lifecycle
 		architectView.OnResume ();
 
 		//Load your wikitude world if it hasn't been loaded yet
-		if (!worldLoaded)
-		{
+		if (!worldLoaded) {
 			architectView.Load("http://wikitude.world.url.com");	
 			worldLoaded = true;
 		}
@@ -128,3 +125,7 @@ On Android, you must also manually inject location updates to the ArchitectView.
 if (architectView != null)
 	architectView.SetLocation (LATITUDE, LONGITUDE, ALTITUDE, ACCURACY);
 ```
+
+### Learn More
+You can learn more about Wikitude by visiting http://wikitude.com
+
