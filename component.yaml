@@ -1,0 +1,20 @@
+version: 3.3.1
+name: Wikitude
+id: wikitude
+publisher: Wikitude
+no_build: true
+publisher-url: http://wikitude.com
+summary: "All-in-One Augmented Reality solution including image recognition and tracking, 3D model rendering, video overlay and Geo AR"
+libraries:
+  android: 
+    - source/binding/Android/Wikitude.Android.dll
+  ios:
+    - source/binding/iOS/Wikitude.iOS.dll
+samples:
+  - name: "WikitudeSampleAndroid"
+    path: source/samples/WikitudeSampleAndroid/WikitudeSampleAndroid.sln
+  - name: "WikitudeSampleiOS"
+    path: source/samples/WikitudeSampleiOS/WikitudeSampleiOS.sln
+icons: 
+  - component/icons/wikitude_128x128.png
+  - component/icons/wikitude_512x512.png
