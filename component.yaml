@@ -7,14 +7,14 @@ publisher-url: http://wikitude.com
 summary: "All-in-One Augmented Reality solution including image recognition and tracking, 3D model rendering, video overlay and Geo AR"
 libraries:
   android: 
-    - source/binding/Android/Wikitude.Android.dll
+    - source/binding/Android/Wikitude.SDK.dll
   ios:
-    - source/binding/iOS/Wikitude.iOS.dll
+    - source/binding/iOS/Wikitude.SDK.dll
 samples:
   - name: "WikitudeSampleAndroid"
-    path: source/samples/WikitudeSampleAndroid/WikitudeSampleAndroid.sln
+    path: source/samples/Android/WikitudeSampleAndroid.sln
   - name: "WikitudeSampleiOS"
-    path: source/samples/WikitudeSampleiOS/WikitudeSampleiOS.sln
+    path: source/samples/iOS/WikitudeSampleiOS.sln
 icons: 
   - component/icons/wikitude_128x128.png
   - component/icons/wikitude_512x512.png
