@@ -47,11 +47,11 @@ namespace WikitudeSample
 
 				foreach (var jobj in indexArr)
 				{
-					var elem = new StyledStringElement (jobj["Title"].ToString(), () =>
+					var elem = new StyledStringElement (jobj["Title"].ToString().Trim('"'), () =>
 					{
-						var path = jobj["Path"].ToString();
-						var vc = jobj["ViewController"].ToString();
-						
+						var path = jobj["Path"].ToString().Trim('"');
+						var vc = jobj["ViewController"].ToString().Trim('"');
+					
 						arController = new ARViewController(path, false);
 						NavigationController.PushViewController(arController, true);
 					});
