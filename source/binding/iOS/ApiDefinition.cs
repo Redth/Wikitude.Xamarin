@@ -24,7 +24,7 @@ namespace Wikitude.Architect
 		//[Export("initializeWithKey:motionManager:")]
 		//void Initialize(string key, [NullAllowed]CMMotionManager motionManager);
 
-        [Static, Export("isDeviceSupportedForARMode:")]
+		[Static, Export("isDeviceSupportedForAugmentedRealityMode:")]
 		bool IsDeviceSupported(Wikitude.Architect.AugmentedRealityMode supportedMode);
 
         [Export("loadArchitectWorldFromUrl:")]
