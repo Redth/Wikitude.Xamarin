@@ -15,7 +15,7 @@
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>Wikitude Example</string>
+	<string>Wikitude Samples</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon</string>
