@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:architect="http://schemas.android.com/apk/res/com.mobilizy.wikitude.content.camview.architect.view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+<!-- <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/icon_architect"/>-->
+    <com.wikitude.architect.ArchitectView
+        android:id="@+id/architectView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>

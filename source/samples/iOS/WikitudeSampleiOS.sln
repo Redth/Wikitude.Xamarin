@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wikitude.iOS", "..\..\binding\iOS\Wikitude.iOS.csproj", "{273637CB-AC56-4C20-B57A-CCB74E2C19E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikitudeSampleiOS", "WikitudeSampleiOS\WikitudeSampleiOS.csproj", "{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Release|iPhone.Build.0 = Release|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{273637CB-AC56-4C20-B57A-CCB74E2C19E4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Debug|iPhone.Build.0 = Debug|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Release|iPhone.ActiveCfg = Release|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Release|iPhone.Build.0 = Release|iPhone
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{9ADF9D15-0B78-499D-B8AE-5C6C7B8636F0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = WikitudeSampleiOS\WikitudeSampleiOS.csproj
+	EndGlobalSection
+EndGlobal
