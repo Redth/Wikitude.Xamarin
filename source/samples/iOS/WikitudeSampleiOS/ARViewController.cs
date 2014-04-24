@@ -32,9 +32,11 @@ namespace WikitudeSample
 				var absoluteWorldUrl = WorldOrUrl;
 
 				if (!IsUrl)
-					absoluteWorldUrl = NSBundle.MainBundle.BundleUrl.AbsoluteString + "/ARchitectExamples/" + WorldOrUrl + "/index.html";
+					absoluteWorldUrl = NSBundle.MainBundle.BundleUrl.AbsoluteString + "ARchitectExamples/" + WorldOrUrl + "/index.html";
 
-				arView.LoadArchitectWorld (NSUrl.FromString (absoluteWorldUrl));
+				var u = new NSUrl (absoluteWorldUrl);
+				
+				arView.LoadArchitectWorld (u);
 
 			}
 			else
