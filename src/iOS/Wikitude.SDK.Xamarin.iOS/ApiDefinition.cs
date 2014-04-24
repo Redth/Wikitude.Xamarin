@@ -14,11 +14,18 @@ namespace Wikitude.Architect
         [Export ("initWithFrame:")]
         IntPtr Constructor (RectangleF frame);
 
-        [Export("initializeWithKey:motionManager:")]
-        void Initialize(string key, [NullAllowed]CMMotionManager motionManager);
+		[Export ("initWithFrame:motionManager:augmentedRealityMode:")]
+		IntPtr Constructor (RectangleF frame, CMMotionManager motionManager, AugmentedRealityMode augmentedRealityMode);
+
+		[Export ("setLicenseKey:")]
+		void SetLicenseKey(string licenseKey);
+
+		//[Deprecated("Use the constructor ctor(string key, CMMotionManager motionManager, AugmentedRealityMode augmentedRealityMode) instead!")]
+		//[Export("initializeWithKey:motionManager:")]
+		//void Initialize(string key, [NullAllowed]CMMotionManager motionManager);
 
         [Static, Export("isDeviceSupportedForARMode:")]
-        bool IsDeviceSupported(Wikitude.Architect.ARMode supportedMode);
+		bool IsDeviceSupported(Wikitude.Architect.AugmentedRealityMode supportedMode);
 
         [Export("loadArchitectWorldFromUrl:")]
         void LoadArchitectWorld(NSUrl architectWorldUrl);
@@ -26,7 +33,7 @@ namespace Wikitude.Architect
         [Export("callJavaScript:")]
         void CallJavaScript(string javaScript);
 
-        [Export("injectLocationWithLatitude:longitude:altitude:accuracy:")]
+		[Export("injectLocationWithLatitude:longitude:altitude:accuracy:")]
         void InjectLocation(float latitude, float longitude, float altitude, float accuracy);
 
 		[Export("injectLocationWithLatitude:longitude:accuracy:")]
@@ -43,6 +50,10 @@ namespace Wikitude.Architect
 
        	[Export("versionNumber")]
 		string GetVersionNumber();
+
+		[Static]
+		[Export("versionNumber")]
+		string VersionNumber { get; }
 
         [Export("clearCache")]
         void ClearCache();
