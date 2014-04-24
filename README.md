@@ -13,11 +13,11 @@ Whether you are publishing to Wikitude or using our Augmented Reality SDK – Wi
 - **Wikitude Studio - Content Management** Wikitude Studio is the easiest way to create and manage augmented reality content. The web-based tool provides an easy drag and drop interface. Content that is created in Wikitude Studio can be exported and used in the Wikitude SDK. The usage of Wikitude Studio is optional.
 
 
-Please see [components/Details.md](components/Details.md) for more details.
+Please see [component/Details.md](component/Details.md) for more details.
 
 
 ### Getting Started
-There is a more detailed Getting Started document located at [components/GettingStarted.md](components/GettingStarted.md)
+There is a more detailed Getting Started document located at [component/GettingStarted.md](component/GettingStarted.md)
 
 Please see this document for more information on how to add Wikitude to your app.
 
