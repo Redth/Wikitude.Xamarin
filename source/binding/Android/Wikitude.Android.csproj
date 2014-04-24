@@ -55,6 +55,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Xamarin.Android.Bindings.targets" />
   <ItemGroup>
-    <InputJar Include="Jars\wikitudesdk.jar" />
+    <EmbeddedJar Include="Jars\wikitudesdk.jar" />
   </ItemGroup>
 </Project>
