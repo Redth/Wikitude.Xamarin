@@ -1,151 +1,45 @@
-The Wikitude SDK allows developers to create immersive Augmented Reality experiences quickly and easily, and share them cross platform.  
 
-- Available for Xamarin.iOS and Xamarin.Android
-- Includes full feature set of Wikitude SDK
-- Cross Platform AR 'Worlds' defined in HTML/CSS/Javascript
-- Natural Feature Detection
-- Fully customizable Markers (Images/HTML/CSS)
-- Video Markers
-- Geolocation Targets
+Whether you are publishing to Wikitude or using our Augmented Reality SDK – Wikitude takes out the complexity of working with AR and lets you focus on your content.
+
+- **Cross Platform** works with both Xamarin.iOS and Xamarin.Android
+- **HTML5 and JavaScript** Creating Augmented Reality content hasn’t been simpler – base your creations on well known web standards and get out most of HTML, JavaScript and CSS.
+- **All-in-One** With the Wikitude SDK you have one library in your hands, which unifies all augmented reality technologies. It supports sensor-based augmented reality experiences as well as augmentations based on image recognition and tracking.
+- **Fully Customizable** Quickly and easily add a fully customized Augmented Reality view to your existing app. With no restrictions placed upon how you use Wikitude’s technology, the sky’s the limit.
 
 
-### Getting Started ###
+### Image Recognition and Tracking
+![Image Recognition and Tracking](http://www.wikitude.com/wp-content/uploads/2012/02/131018_WT_SDK_FeatureImage_IR_404x200.jpg)
 
-#### The Augmented Reality View####
-
-Wikitude uses the concept of a Wikitude 'World', which is a HTML/CSS/Javascript page that you tell the `ArchitectView` to load.  In this page, you can access the Wikitude ARchitect Engine javascript API to add image recognition targets and markers, Geo markers, and more!  The idea is that you can share your 'World' code across iOS and Android platforms.
-
-Therefore, on each platform, we only need to create the `ArchitectView` to load the Wikitude World into.
-
-To learn more about building Wikitude Worlds, visit: http://developer.wikitude.com/ and also check out the samples included in this release that show you how to create and load Wikitude worlds.
+The Wikitude SDK embeds inhouse-built image recognition and tracking technology, which can be used out of the box. It works with up to 1000 images that can be recognized offline. Developers can switch seamlessly between augmenting recognized images and geo-located points of interest within the live camera image.
 
 
-#### iOS ####
+### Location Based Services with Geo Data
+![Location Based Services with Geo Data](http://www.wikitude.com/wp-content/uploads/2012/02/131018_WT_SDK_FeatureImage_Geo_404x200.jpg)
 
-To get started, you'll need to create a new instance of the `ArchitectView` and add it to your ViewController.  You should also check to see if the AR mode you want is supported on the device:
-
-```csharp
-//Check and see if Geo AR is supported
-if (ArchitectView.IsDeviceSupported (ARMode.Geo))
-{
-	//Create our AR View
-	arView = new ArchitectView (UIScreen.MainScreen.Bounds);
-	
-	//Set our ViewController's view to be the AR View
-	this.View = arView;
-
-	//Initialize our AR engine with our license key
-	arView.Initialize ("YOUR_LICENSE_KEY_HERE", null);
-
-	//Load an AR Wikitude World from a url
-	arView.LoadArchitectWorld (NSUrl.FromString ("http://wikitude.world.url.com"));
-}
-```
-
-The other important step is to tell the ArchitectView about lifecycle events in your View Controller, namely, when the Architect View should be Started and Stopped.  This usually happens in the `ViewDidAppear` and `ViewWillDisappear` methods:
-
-```csharp
-public override void ViewDidAppear (bool animated)
-{
-	base.ViewDidAppear (animated);
-
-	if (arView != null)
-		arView.Start ();
-}
-
-public override void ViewWillDisappear (bool animated)
-{
-	base.ViewWillDisappear (animated);
-
-	if (arView != null)
-		arView.Stop ();
-}
-```
-
-
-#### Android ####
-
-To get started, you'll need to add an `ArchitectView` to your Android Layout:
-
-```xml
-<Wikitude.Architect.ArchitectView
-  android:id="@+id/architectView"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent" />
-```
-
-Next, you need to inform the ArchitectView of all the Activity or Fragment lifecycle changes:
-
-```csharp
-
-protected override void OnCreate (Bundle bundle)
-{
-	//Set your content view as usual
-	SetContentView(Resource.Layout.main);
-
-	//Find your Architect view from the layout you just used
-	architectView = FindViewById<ArchitectView>(Resource.Id.architectView);
-
-	//Activate the ArchitectView with your license
-	architectView.OnCreate(new ArchitectView.ArchitectConfig("YOUR LICENSE KEY"));
-}
-
-bool worldLoaded = false;
-protected override void OnResume ()
-{
-	base.OnResume ();
-
-	if (architectView != null)
-	{
-		//Tell the AR View about the resume step in the lifecycle
-		architectView.OnResume ();
-
-		//Load your wikitude world if it hasn't been loaded yet
-		if (!worldLoaded)
-		{
-			architectView.Load("http://wikitude.world.url.com");	
-			worldLoaded = true;
-		}
-	}
-}
-
-protected override void OnPause ()
-{
-	base.OnPause ();
-
-	if (architectView != null)
-		architectView.OnPause ();
-}
-
-protected override void OnDestroy ()
-{
-	base.OnDestroy ();
-
-	if (architectView != null)
-		architectView.OnDestroy ();
-}
-
-public override void OnLowMemory ()
-{
-	base.OnLowMemory ();
-
-	if (architectView != null)
-		architectView.OnLowMemory ();
-}
-```
-
-##### Android and Location Updates #####
-On Android, you must also manually inject location updates to the ArchitectView.  There are several strategies for obtaining location data on Android, but the important thing is to call the `SetLocation` method on the ArchitectView whenever your location changes:
-
-```csharp
-if (architectView != null)
-	architectView.SetLocation (LATITUDE, LONGITUDE, ALTITUDE, ACCURACY);
-```
+The Wikitude SDK comes with many convenience features to make working with geo-referenced data easy. Design and layout of your points of interest are fully customizable to your meet your needs.
 
 
 
-### LICENSE ###
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+### Video Augmentation
+![Video Augmentation](http://www.wikitude.com/wp-content/uploads/2012/02/131018_WT_SDK_FeatureImage_VideoOverlay_404x200.jpg)
 
-   http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Adding videos to your augmented reality projects is simple and highly engaging for your users. Wikitude allows you to use either self hosted videos, or videos directly from YouTube or Vimeo. You can even include video with an alpha channel to create your own Hollywood magic in both your Wikitude SDK and Studio projects.
+
+
+
+### 3D Models and Rendering
+![3D Models and Rendering](http://www.wikitude.com/wp-content/uploads/2012/02/131018_WT_SDK_FeatureImage_3D_404x200.jpg)
+
+The Wikitude SDK can load and render 3D models in the augmented reality scene. Import your 3D model from your favorite tool like Autodesk® Maya® 3D or Blender. Every 3D model can be used in combination with image recognition targets or with geolocations.
+
+
+
+### Wikitude Studio - Content Management
+![Wikitude Studio - Content Management](http://www.wikitude.com/wp-content/uploads/2012/02/131018_WT_SDK_FeatureImage_Studio_404x200.jpg)
+
+Wikitude Studio is the easiest way to create and manage augmented reality content. The web-based tool provides an easy drag and drop interface. Content that is created in Wikitude Studio can be exported and used in the Wikitude SDK. The usage of Wikitude Studio is optional.
+
+
+## Learn More
+You can learn more about Wikitude by visiting http://www.Wikitude.com
+
